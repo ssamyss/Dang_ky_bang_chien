@@ -1,0 +1,47 @@
+/* Giao diện Thủy Mặc (tranh thuỷ mặc kiếm hiệp, giấy dó). Chỉ áp dụng khi <html data-theme="thuymac"> */
+.scene{display:none;position:absolute;left:0;top:0;width:100%;height:100%}
+.themebtn{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:6;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--gold2);cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 22px rgba(0,0,0,.3);transition:transform .2s,box-shadow .2s}
+.themebtn:hover{transform:rotate(18deg) scale(1.08)}.themebtn svg{width:22px;height:22px}
+html[data-theme="thuymac"]{--bg:#e9e0cb;--card:rgba(251,246,233,.86);--cardsolid:#fbf6e9;--ink:#26221c;--mute:#6a6657;--line:rgba(96,70,30,.3);--gold:#8a6420;--gold2:#86281a;--jade:#2f7d6e;--soft:rgba(47,125,110,.14);--seal:#b8381f;color-scheme:light}
+html[data-theme="thuymac"] .scene{display:block}
+html[data-theme="thuymac"] .mount,html[data-theme="thuymac"] .moon.night{display:none}
+html[data-theme="thuymac"] .bg{background:radial-gradient(60% 50% at 78% 16%,rgba(201,69,47,.17),transparent 70%),linear-gradient(180deg,#f7f0de 0%,#efe5cd 48%,#e2d7bd 100%)}
+html[data-theme="thuymac"] .bg::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.45;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27240%27%20height%3D%27240%27%3E%3Cfilter%20id%3D%27n%27%3E%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%27.85%27%20numOctaves%3D%272%27%20stitchTiles%3D%27stitch%27/%3E%3CfeColorMatrix%20values%3D%270%200%200%200%20.36%20%200%200%200%200%20.27%20%200%200%200%200%20.14%20%200%200%200%20.6%200%27/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23n%29%27/%3E%3C/svg%3E")}
+html[data-theme="thuymac"] .moon{width:132px;height:132px;top:9%;right:9%;background:radial-gradient(circle at 42% 38%,#e5603f,#b8381f 70%);box-shadow:0 0 50px 18px rgba(201,69,47,.28),0 0 150px 70px rgba(201,69,47,.12);opacity:.93}
+html[data-theme="thuymac"] .mist{background:radial-gradient(closest-side,rgba(255,255,255,.8),transparent);filter:blur(28px)}
+html[data-theme="thuymac"] body{background:var(--bg)}
+html[data-theme="thuymac"] h1{background:linear-gradient(180deg,#2b2520,#5e1d12);-webkit-background-clip:text;background-clip:text}
+html[data-theme="thuymac"] .logo,html[data-theme="thuymac"] .auth .seal{box-shadow:0 6px 20px rgba(120,35,20,.4),inset 0 0 0 3px rgba(0,0,0,.2)}
+html[data-theme="thuymac"] .role{background:rgba(138,100,32,.12)}
+html[data-theme="thuymac"] nav.main a{color:#5d5848}
+html[data-theme="thuymac"] nav.main a:hover{color:var(--ink)}
+html[data-theme="thuymac"] nav.main a[aria-current=page]{color:var(--gold2);text-shadow:none}
+html[data-theme="thuymac"] .ind{box-shadow:0 0 8px rgba(184,56,31,.45)}
+html[data-theme="thuymac"] .card{box-shadow:0 8px 28px rgba(80,55,20,.2)}
+html[data-theme="thuymac"] .card:hover{border-color:rgba(138,100,32,.55);box-shadow:0 10px 34px rgba(80,55,20,.28)}
+html[data-theme="thuymac"] .btn.ghost{background:rgba(255,255,255,.55);color:var(--ink)}
+html[data-theme="thuymac"] .btn.danger{color:#a22b17;border-color:rgba(162,43,23,.5)}
+html[data-theme="thuymac"] .btn.danger:hover:not(:disabled){background:rgba(184,56,31,.12)}
+html[data-theme="thuymac"] input,html[data-theme="thuymac"] select,html[data-theme="thuymac"] textarea{background:rgba(255,255,255,.62);color:var(--ink)}
+html[data-theme="thuymac"] input:focus,html[data-theme="thuymac"] select:focus,html[data-theme="thuymac"] textarea:focus{box-shadow:0 0 0 3px rgba(138,100,32,.22)}
+html[data-theme="thuymac"] ::placeholder{color:#9b9684}
+html[data-theme="thuymac"] option{background:#fbf6e9;color:var(--ink)}
+html[data-theme="thuymac"] input[type=date]::-webkit-calendar-picker-indicator{filter:none}
+html[data-theme="thuymac"] .err,html[data-theme="thuymac"] .full{color:#b8381f}
+html[data-theme="thuymac"] .row{border-bottom-color:rgba(96,70,30,.15)}
+html[data-theme="thuymac"] .row:hover,html[data-theme="thuymac"] tbody tr:hover{background:rgba(138,100,32,.08)}
+html[data-theme="thuymac"] th,html[data-theme="thuymac"] td{border-bottom-color:rgba(96,70,30,.16)}
+html[data-theme="thuymac"] .bar{background:rgba(80,55,20,.13)}
+html[data-theme="thuymac"] .chip{background:color-mix(in srgb,var(--sc,var(--jade)) 24%,#fbf6e9)}
+html[data-theme="thuymac"] .squad{background:rgba(255,255,255,.42)}
+html[data-theme="thuymac"] .squad.full{box-shadow:inset 0 0 22px rgba(184,56,31,.13)}
+html[data-theme="thuymac"] .slist:has(.sortable-ghost){background:rgba(138,100,32,.11)}
+html[data-theme="thuymac"] .mem{background:color-mix(in srgb,var(--sc,transparent) 17%,#fbf6e9);border-top-color:rgba(96,70,30,.22);border-right-color:rgba(96,70,30,.22);border-bottom-color:rgba(96,70,30,.22)}
+html[data-theme="thuymac"] .sortable-chosen{box-shadow:0 10px 24px rgba(60,40,10,.35)}
+html[data-theme="thuymac"] .u{background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(228,210,168,.65))}
+html[data-theme="thuymac"] .live{color:#b8381f}
+html[data-theme="thuymac"] .toast{background:#fbf6e9;color:var(--ink);box-shadow:0 8px 26px rgba(60,40,10,.3)}
+html[data-theme="thuymac"] .okmsg{background:rgba(47,125,110,.12)}
+html[data-theme="thuymac"] .squad.full{color:var(--ink)}
+html[data-theme="thuymac"] .role.admin{background:linear-gradient(180deg,#d4563f,#8f2a1c);color:#fff2d6;border-color:var(--gold)}
+@media (max-width:560px){html[data-theme="thuymac"] .moon{width:74px;height:74px;top:26%;right:-6px;opacity:.8}}

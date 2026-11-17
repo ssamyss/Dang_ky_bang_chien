@@ -1,0 +1,24 @@
+/* Bố cục: đầu trang, thanh tab, khung nội dung (card) */
+/* header */
+header.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(145deg,#d4563f,#7e2417);border:2px solid var(--gold);display:grid;place-items:center;font:700 1.9rem "Noto Serif","Songti SC",serif;color:#ffe9bd;transform:rotate(-5deg);box-shadow:0 6px 24px rgba(201,69,47,.45),inset 0 0 0 3px rgba(0,0,0,.25)}
+.tag{color:var(--gold);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase}
+.who{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.role{display:inline-block;padding:1px 12px;border-radius:99px;border:1px solid var(--line);background:rgba(216,180,106,.1);color:var(--gold2);font-size:.8rem;font-weight:600}
+.role.admin{background:linear-gradient(180deg,#d4563f,#8f2a1c);color:#fff2d6;border-color:var(--gold)}
+/* tabs */
+nav.main{position:relative;display:flex;gap:2px;border-bottom:1px solid var(--line);margin-bottom:20px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{padding:11px 18px;text-decoration:none;color:var(--mute);font-weight:500;letter-spacing:.03em;white-space:nowrap;transition:color .25s,text-shadow .25s}
+nav.main a:hover{color:var(--ink)}
+nav.main a[aria-current=page]{color:var(--gold2);font-weight:600;text-shadow:0 0 14px rgba(243,220,160,.55)}
+.ind{position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,transparent,var(--gold),var(--seal),var(--gold),transparent);box-shadow:0 0 12px var(--gold)}
+.badge{display:inline-block;min-width:18px;padding:0 6px;margin-left:6px;border-radius:99px;background:var(--seal);color:#fff;font-size:.75rem;line-height:18px;text-align:center;font-weight:600;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(201,69,47,0);transform:scale(1.08)}0%,100%{box-shadow:0 0 0 0 rgba(201,69,47,.6)}}
+/* cards */
+.card{position:relative;background:var(--card);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:6px;padding:20px;margin-bottom:18px;box-shadow:0 10px 36px rgba(0,0,0,.4);transition:border-color .3s,box-shadow .3s}
+.card:hover{border-color:rgba(216,180,106,.5);box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 24px rgba(216,180,106,.08)}
+.card::before,.card::after{content:"";position:absolute;width:16px;height:16px;border:2px solid var(--gold);pointer-events:none;opacity:.85}
+.card::before{top:-1px;left:-1px;border-right:0;border-bottom:0;border-radius:6px 0 0 0}
+.card::after{bottom:-1px;right:-1px;border-left:0;border-top:0;border-radius:0 0 6px 0}
