@@ -72,3 +72,6 @@ Máy chủ đã siết chính sách bảo mật (CSP): trang không còn chạy 
 - **Thủy Mặc** (mặc định, sáng): tranh thuỷ mặc trên giấy dó, mặt trời đỏ, núi đá trong sương, chùa, cây tùng, kiếm khách trên vách đá, hạc, tre, thuyền câu. Phong cảnh là SVG nằm trong `index.html` (thẻ `<svg class="scene">`), tre được sinh bằng code trong `js/effects.js`.
 - **Dạ Hàn** (tối): đêm trăng, núi phủ sương, tuyết và hoa mai rơi.
   Nút tròn ở góc dưới bên phải để chuyển qua lại; trình duyệt nhớ lựa chọn của từng người. Muốn đổi giao diện mặc định, sửa biến `t` trong `js/theme.js`.
+=======
+# Dang_ky_bang_chien
+
